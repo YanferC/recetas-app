@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetas Deliciosas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cuchara Llena</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="img/gourmet.png">
+
 </head>
+
 <body>
-    <header>
-        <h1>Recetas Deliciosas</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="recetas.html">Buscar Recetas</a></li>
-                <li><a href="perfil.html">Mi Perfil</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="destacadas">
-            <h2>Recetas Destacadas</h2>
-            <div class="recetas-container">
-                <article class="receta">
-                    <img src="img/receta1.jpg" alt="Receta 1">
-                    <h3>Receta Ejemplo</h3>
-                    <p>Descripción breve de la receta...</p>
-                    <a href="detalle.html">Ver Receta</a>
-                </article>
-                <!-- Más recetas aquí -->
+    <header class="bg-White text-white py-3 px-4 d-flex align-items-center justify-content-between">
+        <nav class="navbar navbar-expand-lg bg-light px-3">
+            <div class="container-fluid">
+                <!-- Menú hamburguesa alineado a la derecha -->
+                <div class="dropdown ms-auto">
+                    <button class="btn text-black fs-3" type="button" id="menuDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        &#9776;
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+                        <li><a class="dropdown-item" href="agregar.html">Agregar Receta</a></li>
+                        <li><a class="dropdown-item" href="#">Actualizar Receta</a></li>
+                        <li><a class="dropdown-item" href="#">Eliminar Receta</a></li>
+                    </ul>
+                </div>
+                <!-- Ícono y título alineados a la izquierda -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/gourmet.png" alt="Ícono Gourmet" style="width: 40px; height: 40px;">
+                    <h1 class="m-0 fw-bold ms-2" style="font-family: 'Georgia', serif; color: #085fc2;">
+                        Cuchara <span style="color: #c3b431;">Llena</span>
+                    </h1>
+                </a>
             </div>
+        </nav>
+        
+
+        <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+            <div class="d-flex align-items-center">
+                <img src="img/BuscarR.gif" alt="Buscar" class="img-fluid" style="width: 40px; height: 40px;">
+                <a href="recetas.html" class="text-dark fw-bold d-flex align-items-center ms-2 text-decoration-none">
+                    <i class="fas fa-utensils fa-lg me-2"></i> Buscar Recetas
+                </a>
+            </div>
+        
+            <div class="d-flex align-items-center">
+                <img src="img/libroCocina.gif" alt="Libro Cocina" class="img-fluid" style="width: 40px; height: 40px;">
+                <a href="#" class="text-dark fw-bold d-flex align-items-center ms-2 text-decoration-none">
+                    <i class="fas fa-book fa-lg me-2"></i> Libro de cocina
+                </a>
+            </div>
+        
+            <div class="d-flex align-items-center">
+                <img src="img/UsuarioCocina.gif" alt="Inicio Sesión" class="img-fluid" style="width: 40px; height: 40px;">
+                <a href="perfil.html" class="text-dark fw-bold d-flex align-items-center ms-2 text-decoration-none">
+                    <i class="fas fa-user-circle fa-lg me-2"></i> Iniciar sesión
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-danger">
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link text-white fw-bold" href="recetas.html">Buscar Recetas</a></li>
+        </ul>
+    </nav>
+
+    <main class="container my-4">
+        <section class="card p-4 mb-4">
+            <h2 class="text-center">Agregar Nueva Receta</h2>
+            <form id="receta-form">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripción:</label>
+                    <textarea id="descripcion" class="form-control" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="imagen" class="form-label">URL de Imagen:</label>
+                    <input type="text" id="imagen" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría:</label>
+                    <input type="text" id="categoria" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tiempo" class="form-label">Tiempo de Preparación (min):</label>
+                    <input type="number" id="tiempo" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Agregar Receta</button>
+            </form>
         </section>
+
+        
     </main>
-    
-    <footer>
-        <p>&copy; 2025 Recetas Deliciosas</p>
+    <section>
+        <main>
+            <section class="destacadas">
+                <h2>Recetas Destacadas</h2>
+                <div class="recetas-container">
+                    <article class="receta">
+                        <img src="img/receta1.jpg" alt="Receta 1">
+                        <h3>Receta Ejemplo</h3>
+                        <p>Descripción breve de la receta...</p>
+                        <a href="detalle.html">Ver Receta</a>
+                    </article>
+                    <!-- Más recetas aquí -->
+                </div>
+            </section>
+        </main>
+    </section>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Cuchara Llena</p>
     </footer>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
