@@ -1,35 +1,4 @@
 /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-
-header {
-    background-color: #ff5722;
-    color: white;
-    padding: 15px;
-    text-align: left;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .destacadas {
     padding: 20px;
     text-align: center;
@@ -53,8 +22,20 @@ nav ul li a {
 
 .receta img {
     width: 100%;
+    /* Ajusta la imagen al ancho del contenedor */
+    max-width: 300px;
+    /* Tamaño máximo para evitar que sea muy grande */
+    height: 200px;
+    /* Altura fija */
+    object-fit: cover;
+    /* Mantiene la proporción sin deformarse */
     border-radius: 10px;
+    /* Bordes redondeados */
+    display: block;
+    margin: 0 auto;
+    /* Centra la imagen */
 }
+
 
 footer {
     background-color: #333;
@@ -65,5 +46,6 @@ footer {
 }
 
 a {
-    text-decoration: none !important; /* Elimina la línea debajo del enlace */
+    text-decoration: none !important;
+    /* Elimina la línea debajo del enlace */
 }
