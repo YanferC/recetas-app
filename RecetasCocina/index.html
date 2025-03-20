@@ -65,61 +65,33 @@
     <main class="container my-4">
         <!-- Sección Recetas Destacadas -->
         <section class="card p-4 mb-4">
-            <h2 class="text-center">Recetas Destacadas</h2>
-            <div class="recetas-container d-flex flex-wrap justify-content-around">
-                <article class="receta card m-2 p-2 text-center">
-                    <img src="img/receta1.jpg" class="img-fluid" alt="Receta 1">
-                    <h3>Receta Ejemplo</h3>
-                    <p>Descripción breve de la receta...</p>
-                    <a href="detalle-receta.html" class="btn btn-danger">Ver Receta</a>
-                </article>
-                <!-- Más recetas destacadas -->
-            </div>
+            <h2 class="text-center">Agregar Nueva Receta</h2>
+            <form id="receta-form">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripción:</label>
+                    <textarea id="descripcion" class="form-control" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="imagen" class="form-label">URL de Imagen:</label>
+                    <input type="text" id="imagen" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría:</label>
+                    <input type="text" id="categoria" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tiempo" class="form-label">Tiempo de Preparación (min):</label>
+                    <input type="number" id="tiempo" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Agregar Receta</button>
+            </form>
         </section>
 
-        <!-- Sección Últimas Recetas -->
-        <section class="card p-4 mb-4">
-            <h2 class="text-center">Últimas Recetas</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="detalle.html" class="text-decoration-none">Pastel de Chocolate</a></li>
-                <li class="list-group-item"><a href="detalle.html" class="text-decoration-none">Ensalada César</a></li>
-                <li class="list-group-item"><a href="detalle.html" class="text-decoration-none">Tacos de Carnitas</a></li>
-                <!-- Más recetas -->
-            </ul>
-        </section>
-
-        <!-- Sección Categorías Populares -->
-        <section class="card p-4 mb-4">
-            <h2 class="text-center">Categorías Populares</h2>
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="categoria.html" class="btn btn-outline-danger">Postres</a>
-                <a href="categoria.html" class="btn btn-outline-danger">Platos Fuertes</a>
-                <a href="categoria.html" class="btn btn-outline-danger">Ensaladas</a>
-                <a href="categoria.html" class="btn btn-outline-danger">Bebidas</a>
-            </div>
-        </section>
-
-        <!-- Sección Recetas Aleatorias -->
-        <section class="card p-4 mb-4">
-            <h2 class="text-center">Recetas Sorpresa</h2>
-            <button class="btn btn-primary w-100">Descubre una Receta Aleatoria</button>
-        </section>
-
-        <!-- Sección Testimonios -->
-        <section class="card p-4 mb-4">
-            <h2 class="text-center">Testimonios</h2>
-            <blockquote class="blockquote text-center">
-                <p>"Cuchara Llena cambió mi forma de cocinar. ¡Las recetas son increíbles!"</p>
-                <footer class="blockquote-footer">María Pérez</footer>
-            </blockquote>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="text-center my-4">
-            <h3>¿Listo para compartir tu receta?</h3>
-            <p>Sube tu receta y forma parte de nuestra comunidad culinaria.</p>
-            <a href="subir-receta.html" class="btn btn-success" target="_blank">Subir Receta</a>
-        </section>
+        
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
