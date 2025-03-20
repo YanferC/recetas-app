@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="${receta.imagen}" alt="${receta.nombre}">
                         <h3>${receta.nombre}</h3>
                         <p>${receta.descripcion}</p>
-                        <a href="detalle.html?id=${receta.id}">Ver Receta</a>
+                        <a href="detalle-receta.html?id=${receta.id}">Ver Receta</a>
                     </article>
                 `;
                     recetasContainer.innerHTML += recetaHTML;
