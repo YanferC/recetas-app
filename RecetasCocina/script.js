@@ -96,7 +96,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         .then(data => {
             alert(data.mensaje); // Mostrar el mensaje del backend
             if (data.mensaje === "Login exitoso") {
-                window.location.href = 'index.html'; // Redirigir a la página de recetas
+                window.location.href = 'principal.html'; // Redirigir a la página de recetas
             }
         })
         .catch(error => console.error('Error:', error));
@@ -123,6 +123,20 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
                 document.getElementById('registerContainer').style.display = 'none';
                 document.getElementById('loginContainer').style.display = 'block';
             }
+        })
+        .catch(error => console.error('Error:', error));
+});
+
+// Manejar el cierre de sesión
+document.getElementById('logoutButton')?.addEventListener('click', function () {
+    fetch('http://localhost:8081/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include', // Incluir cookies en la solicitud
+    })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.mensaje); // Mostrar mensaje de éxito
+            window.location.href = 'index.html'; // Redirigir a la página de inicio
         })
         .catch(error => console.error('Error:', error));
 });

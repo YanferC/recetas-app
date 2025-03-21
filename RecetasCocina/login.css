@@ -11,6 +11,24 @@ body {
     height: 100vh;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los botones */
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+}
+
+.button-container button {
+    flex: 1; /* Los botones ocuparán el mismo ancho */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-container button:first-child {
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
 .container {
     background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
@@ -51,7 +69,6 @@ input {
 }
 
 button {
-    width: 100%;
     padding: 0.75rem;
     background-color: #ff6f61;
     color: white;

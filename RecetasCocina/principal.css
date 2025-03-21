@@ -1,0 +1,130 @@
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#destacadas {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+#carouselRecetas {
+    max-width: 1200px; /* Ajusta según el diseño */
+    margin: auto;
+}
+
+#carouselRecetas .carousel-inner {
+    height: 700px; /* Ajusta el alto según tu preferencia */
+}
+
+#carouselRecetas .carousel-item {
+    height: 100%;
+}
+
+#carouselRecetas .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+}
+
+#categorias .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#categorias img {
+    width: 100%; /* Ocuparán todo el ancho de su contenedor */
+    max-width: 350px; /* Limita el ancho máximo */
+    height: 250px; /* Aumenta la altura */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out; /* Efecto al pasar el mouse */
+}
+
+#categorias img:hover {
+    transform: scale(1.1); /* Aumenta un poco el tamaño al pasar el mouse */
+}
+
+#categorias h5 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#tips {
+    background: #f8f9fa; /* Fondo suave */
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: scale(1.05);
+}
+
+.tip-card i {
+    font-size: 50px;
+}
+
+#suscripcion {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-text {
+    background: #ffc107;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-warning {
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+    background: #ffca2c;
+}
+
+
+h1, h2 {
+    color: #d9534f;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none !important;
+    /* Elimina la línea debajo del enlace */
+}

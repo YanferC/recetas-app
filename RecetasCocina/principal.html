@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas de Cocina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+    <header class="bg-White text-white py-3 px-4 d-flex align-items-center justify-content-between">
+        <nav class="navbar navbar-expand-lg bg-light px-3">
+            <div class="container-fluid">
+                <div class="dropdown ms-auto">
+                    <button class="btn text-black fs-3" type="button" id="menuDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        &#9776;
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+                        <li><a class="dropdown-item" href="agregar.html">Agregar Receta</a></li>
+                        <li><a class="dropdown-item" href="#">Actualizar Receta</a></li>
+                        <li><a class="dropdown-item" href="#">Eliminar Receta</a></li>
+                    </ul>
+                </div>
+
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/gourmet.png" alt="Ícono Gourmet" style="width: 40px; height: 40px;">
+                    <h1 class="m-0 fw-bold ms-2" style="font-family: 'Georgia', serif; color: #085fc2;">
+                        Cuchara <span style="color: #c3b431;">Llena</span>
+                    </h1>
+                </a>
+            </div>
+        </nav>
+
+        <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+            <div class="d-flex align-items-center">
+                <img src="img/BuscarR.gif" alt="Buscar" class="img-fluid" style="width: 40px; height: 40px;">
+                <a href="recetas.html" class="text-dark fw-bold d-flex align-items-center ms-2 text-decoration-none">
+                    <i class="fas fa-utensils fa-lg me-2"></i> Buscar Recetas
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <img src="img/libroCocina.gif" alt="Libro Cocina" class="img-fluid" style="width: 40px; height: 40px;">
+                <a href="#" class="text-dark fw-bold d-flex align-items-center ms-2 text-decoration-none">
+                    <i class="fas fa-book fa-lg me-2"></i> Libro de cocina
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <img src="img/UsuarioCocina.gif" alt="Inicio Sesión" class="img-fluid"
+                    style="width: 40px; height: 40px;">
+                <a href="login.html" class="text-dark fw-bold d-flex align-items-center ms-2 text-decoration-none">
+                    <i class="fas fa-user-circle fa-lg me-2"></i> Cerrar sesión
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-danger">
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link text-white fw-bold"></a></li>
+        </ul>
+    </nav>
+    
+    <!-- Recetas Destacadas -->
+    <section id="destacadas" class="container mt-5">
+        <h2 class="text-center">Recetas Destacadas</h2>
+        <div id="carouselRecetas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="img/paella.png" class="d-block w-100" alt="Paella"></div>
+                <div class="carousel-item"><img src="img/pizza.png" class="d-block w-100" alt="Pizza Margarita"></div>
+                <div class="carousel-item"><img src="img/tacos.png" class="d-block w-100" alt="Tacos al Pastor"></div>
+                <div class="carousel-item"><img src="img/trucha.jpg" class="d-block w-100" alt="Trucha"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecetas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselRecetas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    
+    <!-- Categorías Populares -->
+    <section id="categorias" class="container mt-5">
+        <h2 class="text-center">Categorías Populares</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="img/postres.jpg" alt="Postres" class="img-fluid rounded">
+                <h5>Postres</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="img/carnes.jpg" alt="Carnes" class="img-fluid rounded">
+                <h5>Carnes</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="img/ensaladas.jpg" alt="Ensaladas" class="img-fluid rounded">
+                <h5>Ensaladas</h5>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tips de Cocina -->
+<section id="tips" class="container mt-5 p-4 rounded shadow">
+    <h2 class="text-center mb-4 text-primary fw-bold">🌟 Tips de Cocina</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="tip-card p-3 text-center">
+                <i class="bi bi-basket text-success fs-1"></i>
+                <h5 class="mt-2 fw-bold">Ingredientes Frescos</h5>
+                <p>Usa ingredientes frescos para mejorar el sabor y la calidad de tus platillos.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="tip-card p-3 text-center">
+                <i class="bi bi-thermometer-half text-danger fs-1"></i>
+                <h5 class="mt-2 fw-bold">Precalienta el Horno</h5>
+                <p>Siempre precalienta el horno para asegurar una cocción uniforme y perfecta.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="tip-card p-3 text-center">
+                <i class="bi bi-emoji-smile text-warning fs-1"></i>
+                <h5 class="mt-2 fw-bold">Prueba tu Comida</h5>
+                <p>Prueba los sabores mientras cocinas para ajustar condimentos y evitar errores.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Suscripción -->
+<section id="suscripcion" class="container mt-5 text-center p-5 rounded shadow-lg">
+    <h2 class="text-primary fw-bold">📩 Suscríbete para más recetas</h2>
+    <p class="text-muted">Recibe deliciosas recetas directamente en tu correo.</p>
+    
+    <form class="mt-4">
+        <div class="input-group mb-3 w-50 mx-auto">
+            <span class="input-group-text"><i class="bi bi-person"></i></span>
+            <input type="text" class="form-control" placeholder="Tu nombre">
+        </div>
+
+        <div class="input-group mb-3 w-50 mx-auto">
+            <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+            <input type="tel" class="form-control" placeholder="Tu número de teléfono">
+        </div>
+
+        <div class="input-group mb-3 w-50 mx-auto">
+            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+            <input type="email" class="form-control" placeholder="Tu correo electrónico">
+        </div>
+
+        <button type="submit" class="btn btn-warning px-4 py-2 fw-bold mt-2">📬 Suscribirse</button>
+    </form>
+</section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Cuchara Llena - Todos los derechos reservados.</p>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
