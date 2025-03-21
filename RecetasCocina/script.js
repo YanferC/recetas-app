@@ -61,3 +61,68 @@ fetch("http://localhost:8080/api/recetas")
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error("Error al obtener recetas:", error));*/
+
+
+// URL base de tu backend
+const API_URL = 'http://localhost:8081/api/auth';
+
+// Mostrar/ocultar formularios de login y registro
+document.getElementById('showRegister').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('loginContainer').style.display = 'none';
+    document.getElementById('registerContainer').style.display = 'block';
+});
+
+document.getElementById('showLogin').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('registerContainer').style.display = 'none';
+    document.getElementById('loginContainer').style.display = 'block';
+});
+
+// Manejar el formulario de login
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    fetch('http://localhost:8081/api/auth/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+    })
+        .then(response => response.json()) // Parsear la respuesta como JSON
+        .then(data => {
+            alert(data.mensaje); // Mostrar el mensaje del backend
+            if (data.mensaje === "Login exitoso") {
+                window.location.href = 'index.html'; // Redirigir a la página de recetas
+            }
+        })
+        .catch(error => console.error('Error:', error));
+});
+
+// Manejar el formulario de registro
+document.getElementById('registerForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('regEmail').value;
+    const password = document.getElementById('regPassword').value;
+
+    fetch('http://localhost:8081/api/auth/registro', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ nombre, email, password }),
+    })
+        .then(response => response.json()) // Parsear la respuesta como JSON
+        .then(data => {
+            alert(data.mensaje); // Mostrar el mensaje del backend
+            if (data.mensaje === "Usuario registrado exitosamente") {
+                document.getElementById('registerContainer').style.display = 'none';
+                document.getElementById('loginContainer').style.display = 'block';
+            }
+        })
+        .catch(error => console.error('Error:', error));
+});
