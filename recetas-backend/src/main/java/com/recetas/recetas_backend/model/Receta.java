@@ -2,6 +2,8 @@ package com.recetas.recetas_backend.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "recetas")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
@@ -10,13 +12,20 @@ public class Receta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name="nombre",nullable = false)
     private String nombre;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name="descripcion", columnDefinition = "TEXT")
     private String descripcion;
-
+    @Column(name="imagen")
     private String imagen;
+    @Column(name="categoria")
     private String categoria;
+    @Column(name="tiempoPreparacion")
     private Integer tiempoPreparacion;
+
+    /*@OneToMany(mappedBy = "receta",  fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<RecetaIngrediente> receta_Ingredientes;*/
+
+
 }
